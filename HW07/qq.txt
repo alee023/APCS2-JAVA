@@ -1,0 +1,14 @@
+// Alison Lee
+// APCS2 pd4
+// HW07 -- Xiang's Troubles
+// 2017-02-15
+
+I haven't figured out a way to find whether a n-queens and nxn board problem is solvable. However, by trial and error, I have found that there is at least 1 solution for the 4x4 to 8x8 problems. 
+
+A	2 x 2 has no solutions.
+B	3x3 has no solutions.
+C	4x4 has 1 solution only.
+D	5x5 has 2+ solutions.
+E	6x6 has 1+ solutions.
+F	7x7 has 1+ solutions.
+G	8x8 has 1+ solutions.

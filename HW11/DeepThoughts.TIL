@@ -1,0 +1,50 @@
+Alison Lee, Eric Chen, James Zhang
+APCS2 pd4
+HW11 -- Probing the Depths...
+2017-03-01
+
+Mean execution times for boards of size n*n:
+n=5   0.238s    over 5 executions 
+n=6   0.229s    over 5 executions
+n=7   0.983s    over 5 executions
+n=8   1.117s    over 5 executions
+
+Section Uno:
+Q1: From any starting position, can an open tour always be found? Explain.
+
+	No, an open tour cannot always be found.  We're unsure of the exact
+reasoning, but upon testing it with random starting points, some of the
+starting points didn't result in a solved Knight's Tour.
+
+
+Q2: Same, but for closed tour.
+
+	No, a closed tour cannot always be found.  For instance, on a 4x4
+board, there are no ways to arrive back at the starting point after a tour.
+
+
+Q3: How do you explain the increase in execution time as n increases?
+
+	The increase in execution time is due to the growth in number of tiles
+as n increases.  Because of this, there are more tiles that need to be checked,
+resulting in more paths branching out from those tiles.  That would require more
+time to check and would in general increase execution time.
+
+
+Q4: Thoughts on optimization?
+
+	Unsure.
+
+Section Deux:
+
+Q1. Maze algo
+	1. Check any valid paths (a block that is not marked).
+	   If one of those paths is the end, go on that path and you win
+
+	2. If there is a valid block, go on that path.
+       Mark the square you just left. Go to step 1.
+	   If there is NOT a valid block, go back to the previous square,
+       Mark the square you were just on as a bad path, then go to step 1.
+       If there is no previous square (this is your first move)
+       the maze is faulty.
+(the order is arbitrary, but we will go with up, right, down, left)

@@ -1,0 +1,12 @@
+// Alison Lee
+// APCS2 pd4
+// HW09 -- Get On the Bus
+// 2017-02-27
+
+Similar to the QueensBoard algorithm, this algorithm will employ backtracking.
+A knight, given that there is enough space, has 8 possible moves. 
+The first knight will be placed on the top left corner of the board. It will perform one of its possible moves (there are only 2 at this point). 
+The knight will continue moving until it finds that it has touched every square once OR cannot move again without touching a square it already touched. 
+At this point, it will go back one move, and try another move. If there isn't another move to try, it will go back one move again. 
+
+To keep track whether the knight has touched a square or not, we will mark the squares: 0 for available, -1 for visited. 
