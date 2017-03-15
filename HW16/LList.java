@@ -27,8 +27,18 @@ public class LList implements List
     //--------------v  List interface methods  v--------------
 
     public boolean add( String x ) {
-		_head = new LLNode( x , null ) ;
-		_size ++ ;
+		if( _head == null ) {
+			_head = new LLNode( x , null ) ;
+			_size ++ ;
+		}
+		else {
+			LLNode temp = _head ;
+			while( temp.getNext() != null ) {
+				temp = temp.getNext() ;
+			}
+			temp.setNext( new LLNode( x, null )) ;
+			size ++ ;
+		}
 		return true ;
 	}
 	
