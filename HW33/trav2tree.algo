@@ -1,0 +1,22 @@
+// Alison Lee
+// APCS2 pd4
+// HW33 -- A Tree Grows in 251
+// 2017-04-26
+
+PRE: root, left, right
+IN: left, root, right
+POST: left, right, root
+
+PRE & IN
+The first element in the preorder sequence is the root of the tree. Find this element in the inorder sequence. 
+Everything to the left of this element is the main left branch, and vice versa. (At this pt, I draw a line between the left and right branch elements in preorder. I also cross off the root in preorder).
+Do the same again. The second element should be root of the left branch. 
+
+PRE & POST
+The first element of preorder (and last of postorder) is the root of the tree. The second element in preorder should be the root of the left branch. Find this second element in post order. Everything to the left of it is under the left branch. Repeat this to lay out the left branch.
+"Cross out" all the left branch elements in preorder. The elements left are the right branch elements. Repeat.
+
+IN & POST
+The last element in postorder is the root of the tree. Everything to the left of the root in the inorder sequence is in the left branch and vice versa.
+"Separate" the left and right branch elements in the postorder sequence. 
+Repeat the above process: the last element in the separated left elements (of postorder) will be the root of the left branch. 
